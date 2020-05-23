@@ -1,0 +1,51 @@
+/* pages/login/login.wxss */
+#login{
+  background: url(/images/lbg.png);
+  height: 1218rpx;
+
+}
+._fontw{
+  color:ghostwhite ;
+  font-size:36rpx;
+ 
+}
+._fontc{
+   text-align: center
+}
+.inp1{
+  width: 600rpx;
+  height:60rpx;
+  /* position: absolute; */
+  /* border:1px solid red; */
+  border-radius: 15px; 
+  margin-left: 68rpx;
+  background:#fff;
+  opacity: 0.3;
+  margin-bottom: 20rpx;
+}
+.inp2{
+  width: 600rpx;
+  height:60rpx;
+  /* position: absolute; */
+  /* border:1px solid red; */
+  border-radius: 15px; 
+  display: flex;
+  justify-items: center; 
+  margin-left: 68rpx;
+  background:#fff;
+  opacity: 0.3;
+  margin-bottom: 20rpx;
+}
+._body{
+  height: 200rpx;
+  width: 100%;
+  /* position: relative; */
+}
+._bbtn{
+  margin-top: 80rpx;
+  margin-left:200rpx;
+  color:#f55002;
+  background: whitesmoke;
+  border-radius: 10rpx;
+    
+}

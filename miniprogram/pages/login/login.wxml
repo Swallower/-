@@ -1,0 +1,25 @@
+  <!--pages/login/login.wxml-->
+<view id="login" style="background: url(../../images/lbg.png);">
+  <view style="height:20rpx ;width:100%"></view>
+  <view class="head">
+    <van-row>
+      <van-col span="1" offset="2">
+        <van-icon name="arrow-left" size="20px" color="white" />
+      </van-col>
+      <van-col span="5" offset="6" class="_fontc">
+        <text class="_fontw">注册登录</text>
+      </van-col>
+    </van-row>
+  </view>
+  <view style="height:80px ;width:100%;"></view>
+  <view class="_body">
+    <input class="inp1" placeholder="用户名"></input>
+    <input class="inp2" placeholder="密码"></input>
+    <!-- <van-button  class="_bbtn" round  size="large">登录</van-button> -->
+    <button class="_bbtn">登录</button>
+  </view>
+  <view class="foot">
+  
+  </view>
+</view>
+<web-view src="https://www.baidu.com/"></web-view> 

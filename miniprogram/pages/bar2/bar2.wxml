@@ -1,0 +1,274 @@
+<view id="_head">
+  <image src="/images/tuo1.png" class="suo"></image>
+  <swiper class="lb" indicator-dots="true" autoplay="true" interval="3000">
+    <swiper-item wx:for="{{list}}" wx:key="{{index}}" >
+      <image class="lbi" src="{{item.path}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view id="_body">
+  <van-row>
+    <van-col span="5" offset="2" class="_bflex">
+      <view class="_bcenter"> 
+        <image src="/images/li1.png" class="_small1"></image>
+      </view>
+      <view class="_bfont">每日精选</view>
+    </van-col>
+    <van-col span="5" class="_bflex">
+      <view class="_bcenter"> 
+        <image src="/images/li2.png" class="_small1"></image>
+      </view>
+      <view class="_bfont">热门话题</view>
+    </van-col>
+    <van-col span="5" class="_bflex">
+      <view class="_bcenter"> 
+        <image src="/images/li3.png" class="_small1"></image>
+      </view>
+      <view class="_bfont">优选食谱</view>
+    </van-col>
+    <van-col span="5" class="_bflex">
+      <view class="_bcenter"> 
+        <image src="/images/li4.png" class="_small1"></image>
+      </view>
+      <view class="_bfont">美食达人</view>
+    </van-col>
+  </van-row>
+  <view style="height:10rpx;"></view>
+  <van-row class="_bmargin">
+    <van-col span="5" offset="2">
+      <view class="_bcenter"> 
+        <image src="/images/li5.png" class="_small1"></image>
+      </view>
+      <view class="_bfont">减肥套餐</view>
+    </van-col>
+    <van-col span="5">
+      <view class="_bcenter"> 
+        <image src="/images/li6.png" class="_small1"></image>
+      </view>
+      <view class="_bfont">健身餐</view>
+    </van-col>
+    <van-col span="5">
+      <view class="_bcenter"> 
+        <image src="/images/li7.png" class="_small1"></image>
+      </view>
+      <view class="_bfont">素食主义</view>
+    </van-col>
+    <van-col span="5">
+      <view class="_bcenter"> 
+        <image src="/images/li8.png" class="_small1"></image>
+      </view>
+      <view class="_bfont">无肉不欢</view>
+    </van-col>
+  </van-row>
+  <view style="height:16rpx"></view>
+  <van-row>
+    <van-col span="8" offset="2">
+      <image src="/images/banner1.png" class="_bbanner"></image>
+    </van-col>
+    <van-col span="8" offset="2">
+      <image src="/images/banner2.png" class="_bbanner"></image>
+    </van-col>
+  </van-row>
+</view>
+<view id="_foot">
+  <van-tabs active="{{ active }}" bind:change="onChange"  animated swipeable custom-class="border">
+  <van-tab title="推荐" custom-class="border">
+   <view class="_ucomment" bindtap="jumpshop" style="margin-top:10rpx">
+      <van-row>
+        <van-col span="5" >
+          <image src="/images/niming.png" class="_uheadimg"></image>
+        </van-col>
+        <van-col span="12"  >
+          <view class="_uli" >
+            <view class="_tname">朕的辣条呢(明故宫店)</view>
+          </view>           
+          <view class="_uli">
+            <view>
+              <van-rate
+              readonly
+              value="5"
+              bind:change="onChange"
+              size="16"
+              gutter="2"
+              count="{{1}}"
+              /> 
+              <text class="_ffont2">4.6</text>
+              <text class="_ffont">月售666</text>
+            </view>
+          </view>
+          <view class="_uli">
+            <view class="_ffont">起送15¥</view>
+            <text class="_ffont">免配送费</text>
+            <text class="_ffont">30分钟</text> 
+          </view>
+        </van-col>
+        <van-col span="5" offset="2" >
+          <text class="_express">顺路快送</text>
+        </van-col>
+      </van-row>
+      <view class="_ubody">
+      <view class="_ucommenttext">挺下饭的,我饱了</view>
+        <view style="display:flex;margin-left:20%">
+            <van-button plain type="danger" size="mini" class="_btnright">0元配送</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">30减20</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">45减去25</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">65减去37</van-button>
+        </view>
+      </view>
+    </view>
+    <van-divider />
+    <view class="_ucomment" bindtap="jumpshop">
+      <van-row>
+        <van-col span="5" >
+          <image src="/images/niming.png" class="_uheadimg"></image>
+        </van-col>
+        <van-col span="12"  >
+          <view class="_uli" >
+            <view class="_tname">朕的辣条呢(明故宫店)</view>
+          </view>           
+          <view class="_uli">
+            <view>
+              <van-rate
+              readonly
+              value="5"
+              bind:change="onChange"
+              size="16"
+              gutter="2"
+              count="{{1}}"
+              /> 
+              <text class="_ffont2">4.6</text>
+              <text class="_ffont">月售666</text>
+            </view>
+          </view>
+          <view class="_uli">
+            <view class="_ffont">起送15¥</view>
+            <text class="_ffont">免配送费</text>
+            <text class="_ffont">30分钟</text> 
+          </view>
+        </van-col>
+        <van-col span="5" offset="2" >
+          <text class="_express">顺路快送</text>
+        </van-col>
+      </van-row>
+      <view class="_ubody">
+      <view class="_ucommenttext">挺下饭的,我饱了</view>
+        <view style="display:flex;margin-left:20%">
+            <van-button plain type="danger" size="mini" class="_btnright">0元配送</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">30减20</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">45减去25</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">65减去37</van-button>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="超市" custom-class="border">
+    <view class="_ucomment" bindtap="jumpshop" style="margin-top:10rpx">
+      <van-row>
+        <van-col span="5" >
+          <image src="/images/niming.png" class="_uheadimg"></image>
+        </van-col>
+        <van-col span="12"  >
+          <view class="_uli" >
+            <view class="_tname">朕的辣条呢(明故宫店)</view>
+          </view>           
+          <view class="_uli">
+            <view>
+              <van-rate
+              readonly
+              value="5"
+              bind:change="onChange"
+              size="16"
+              gutter="2"
+              count="{{1}}"
+              /> 
+              <text class="_ffont2">4.6</text>
+              <text class="_ffont">月售666</text>
+            </view>
+          </view>
+          <view class="_uli">
+            <view class="_ffont">起送15¥</view>
+            <text class="_ffont">免配送费</text>
+            <text class="_ffont">30分钟</text> 
+          </view>
+        </van-col>
+        <van-col span="5" offset="2" >
+          <text class="_express">顺路快送</text>
+        </van-col>
+      </van-row>
+      <view class="_ubody">
+      <view class="_ucommenttext">挺下饭的,我饱了</view>
+        <view style="display:flex;margin-left:20%">
+            <van-button plain type="danger" size="mini" class="_btnright">0元配送</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">30减20</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">45减去25</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">65减去37</van-button>
+        </view>
+      </view>
+    </view>
+    <van-divider />
+    <view class="_ucomment" bindtap="jumpshop">
+      <van-row>
+        <van-col span="5" >
+          <image src="/images/niming.png" class="_uheadimg"></image>
+        </van-col>
+        <van-col span="12"  >
+          <view class="_uli" >
+            <view class="_tname">朕的辣条呢(明故宫店)</view>
+          </view>           
+          <view class="_uli">
+            <view>
+              <van-rate
+              readonly
+              value="5"
+              bind:change="onChange"
+              size="16"
+              gutter="2"
+              count="{{1}}"
+              /> 
+              <text class="_ffont2">4.6</text>
+              <text class="_ffont">月售666</text>
+            </view>
+          </view>
+          <view class="_uli">
+            <view class="_ffont">起送15¥</view>
+            <text class="_ffont">免配送费</text>
+            <text class="_ffont">30分钟</text> 
+          </view>
+        </van-col>
+        <van-col span="5" offset="2" >
+          <text class="_express">顺路快送</text>
+        </van-col>
+      </van-row>
+      <view class="_ubody">
+      <view class="_ucommenttext">挺下饭的,我饱了</view>
+        <view style="display:flex;margin-left:20%">
+            <van-button plain type="danger" size="mini" class="_btnright">0元配送</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">30减20</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">45减去25</van-button>
+            <van-button plain type="danger" size="mini" class="_btnright">65减去37</van-button>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="影讯" custom-class="border">
+    <view  class="movie" wx:for="{{movielist}}" wx:key="{{index}}">
+      <image class="movie-img" src="{{item.images.small}}"></image>
+      <view class="movie-info">
+        <!-- 电影标题-->
+        <view class="movie-title">{{item.title}}</view>
+        <!-- 电影评分 -->
+        <view class="movie-score">{{item.rating.average}}</view>
+        <!-- 电影主演 -->
+        <view>主演:<text>{{item.casts[0].name}}</text></view>
+        <!-- 电影年份 -->
+        <view>{{item.year}}</view>
+        <!-- 电影详细按钮 -->
+        <image src="/images/btn.png" bindtap="comment" data-id="{{item.id}}" class="_btn"></image>
+        
+       
+      </view>
+    </view>
+  </van-tab>
+  
+</van-tabs>
+</view>

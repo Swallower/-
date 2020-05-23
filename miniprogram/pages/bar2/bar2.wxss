@@ -1,0 +1,162 @@
+/* pages/bar2/bar2.wxss */
+page{
+  background: #fff;
+}
+#head{
+  position: relative;
+  /* height: 50%; */
+}
+.lb{
+  position: absolute;
+  top:8%;
+  /* margin-top: 8%; */
+  width:100%;
+  height:300rpx;
+  
+}
+.lbi{
+  margin-left:10%; 
+  width:80%;
+  height: 300rpx;
+  border-radius: 20rpx;
+}
+.suo{
+  width:100%;
+  height:180rpx;
+}
+._small1{
+  height: 36px;
+  width: 36px;
+}
+#_body{
+  margin-top: 32%;
+}
+._bflex{
+  margin-bottom: 20rpx;
+}
+._bfont{
+  text-align: center;
+  font-size: 24rpx;
+  opacity: 0.5
+}
+._bcenter{
+  text-align: center;
+}
+._bmargin{
+  margin-top:20rpx;
+}
+._bbanner{
+  height: 200rpx;
+  width: 300rpx
+
+}
+
+
+._ucomment{
+  width:100%;
+  height: 220rpx;
+}
+._uhead{
+  width: 100%;
+  display: flex;
+  height:120rpx;
+}
+._uheadimg{
+  width: 100rpx;
+  height: 100rpx;
+  border:2px solid #f2f2f2;
+  border-radius: 50%;
+  margin-left:18%;
+  display: flex;
+}
+._tname{
+  font-weight: 600;
+}
+._uli{
+  display: flex;
+  justify-content: space-between
+}._ffont{
+  font-size :24rpx;
+  opacity: 0.5;
+}
+._ffont2{
+  font-size:28rpx;
+  font-weight: 600;
+  color: #f58200;
+  display: inline-block;
+  margin: 0 12rpx;
+}
+._express{
+  color: #f58200;
+  font-size:26rpx;
+  background:lightcyan;      
+}
+._ucommenttext{
+  display: inline-block;
+  margin-left:20%;
+  font-size: 24rpx;
+  margin-bottom:8rpx;
+  background: lightgoldenrodyellow;
+  color: #f58200;
+}
+button:not([size='mini']){
+  min-height: 22px;
+  width: 47px;
+}
+._btnright{
+  margin-right:8px; 
+}
+
+
+.movie{
+  display:flex;
+  padding:10rpx;
+  border-bottom:1px solid #ccc
+}
+/* 左侧图片 */
+.movie-img{
+  width:200rpx;
+  height:300rpx;
+  margin-right:40rpx; 
+}
+/* 右侧电影介绍 */
+.movie-info{
+  font-size:28rpx;
+  line-height: 1.8;
+  
+/* 1.8行距 */
+}
+/* 右侧电影标题 */
+.movie-title{
+  color:#666;
+  font-size: 40rpx;
+ 
+}
+/* 右侧电影分数 */
+.movie-score{
+  color:#faa;
+  
+}
+/* 右侧电影按钮 */
+.movie-comment{
+  height:60rpx;
+  width:140rpx;
+  background:#e55555 lightcyan;
+  color:#fff;
+  font-size:40;
+  margin-top:20rpx;
+  margin-bottom: 15rpx;
+ 
+}
+
+._btn{
+  width:240rpx;
+  height: 60rpx;
+  border-radius: 20rpx;
+}
+.border{
+  margin-top: 5%;
+}
+._margintop{
+  margin-top: 5%;
+}

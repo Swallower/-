@@ -1,0 +1,300 @@
+/* pages/settleaccounts/settleaccounts.wxss */
+#all{
+  width: 90%;
+
+  margin:0 5%; 
+}
+#head{
+  /* display: flex; */
+  margin-top:10%;
+  width: 100%;
+}
+._hsite{
+  font-size: 36rpx;
+  font-weight: 600;
+  display: flex;
+  width: 100%;
+}
+._hsitel{
+  display: flex;
+  width:90%;
+}
+._hsiter{
+  display: flex;
+  width:10%;
+  justify-content: center
+}
+._hfont{
+  opacity: 0.5;
+  font-size: 24rpx;
+  margin-top:1%;
+}
+._hcell{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  text-align: center ;
+  align-content: center;
+  background: #fff;
+  border-bottom: 0.8px solid #f8f8f8;
+}
+._hcell view{
+  display: flex;
+}
+._hfcolor{
+  color: #1296db;
+  display: flex;
+  align-items: center;
+  margin-right: 2%;
+  font-size: 28rpx;
+}
+._hfcenter{
+  display: flex;
+  align-items: center ;
+  margin-left:2%; 
+  font-size: 28rpx;
+}
+#body{
+  margin-top:5%;
+  background: #fff;
+  padding:3% 0 2% 2%;
+  border-radius: 8rpx;
+  
+}
+._bshopname{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+._bimg{
+  display: flex;
+  height:80rpx;
+  width:80rpx;
+}
+._bflex{
+  display: flex;
+  width: 100%;
+  margin-bottom: 3%;
+}
+._bright{
+  /* display: flex; */
+  width: 85%;
+}
+._bnumberfont{
+  color: #000;
+  opacity: 0.5;
+}
+._bpricefont{
+  font-weight: 600;
+  font-size: 30rpx;
+}
+._bpricefontred{
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #ff0033;
+}
+
+._btitlefont{
+  font-size:28rpx;
+}
+._bpriceright{
+  display: flex;
+  justify-content: right;
+}
+
+._bfontstyle{
+  background: #111;
+  color:lemonchiffon;
+  font-size: 24rpx;
+  padding: 4rpx 6rpx 0;
+  text-align: center;
+}
+._uheadimg{
+  width: 30rpx;
+  display: flex;  
+}
+._barrowright{
+  margin-left:20%;
+}
+._basd{
+  display: flex;
+  justify-content: flex-end;
+} 
+._btitlefonta{
+  font-weight: 600;
+  font-size: 32rpx;
+}
+._btitlefontb{
+  font-weight: 600;
+  font-size: 36rpx;
+}
+._bpricefontb{
+  font-size: 36rpx;
+  font-weight: 800;
+  color: #ff0033;
+}
+#foot{
+  margin-top: 5%;
+  background: #fff;
+}
+._ffontsize{
+  font-size: 30rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+._fmarign{ 
+  border-bottom:0.5px solid #f8f8f8;
+  align-content: center;
+  padding:3% 0;
+}
+.checkstand{
+  position: fixed;
+  bottom: 0;
+  background: #515151;
+  /* height:100rpx; */
+  width: 100%;
+  padding: 3% 0;
+  z-index: 999;
+}
+._fmarginbottom{
+  margin-bottom: 10%;
+}
+._cbtn{
+  
+  background: limegreen;
+  color: #fff
+}
+._cfont1{
+  color: #f8f8f8;
+  font-size:50rpx;
+  font-weight: 800;
+}
+._cfont2{
+  margin-top: 10%;
+  color: #ddd;
+  font-size: 26rpx;
+}
+.red{
+  width:90%;
+  font-size: 36rpx !important;
+  font-weight: bold;
+  background: #f6f6f6!important;
+  padding:0 !important;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.width{
+  width:70%!important;
+}
+.padding{
+  margin:3%;
+  padding:2%;
+  background: lightgrey;
+  width: 90% !important;
+  font-size:30rpx;
+  border-radius: 10px;
+}
+._vpwidth{
+  margin: auto;
+  padding:3% 0;
+}
+._vpb{
+  font-weight: bold;
+}
+._vpp{
+  font-size: 28rpx;
+  opacity: 0.5;
+}
+._bpadding{
+  padding:1% 0;
+}
+._bpadding2{
+  padding:2% 0;
+}
+.right{
+  display: flex;
+  justify-content: flex-end;
+  margin-left:1%;
+}
+._vpcenter{
+  display:flex;
+  justify-content: center;
+  border-radius: 16px;
+  margin-bottom: 3%;
+}
+._img{
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 15rpx;  
+}
+.hidden{
+  visibility:hidden;
+}
+.none{
+  display: none;
+}
+.pad{
+  padding: 0 !important;
+}
+.all{
+  width: 90%;
+  margin: 5%;
+  padding: 5% 0;
+  display:  flex  ;
+  background:  lightgrey;
+  border-radius: 16rpx;
+  border-top:1px solid #f6f6f6;
+  border-bottom:1px solid #f6f6f6
+}
+.right{
+  display: flex;
+  width:80%;
+  
+}
+.left{
+  display: flex;
+  width: 20%;
+}
+.rleft{
+  /* display: flex; */
+  width: 55%;
+}
+.rright{
+  width: 45%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.lfont0{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 56rpx;
+  font-weight: 600;
+  color: #d81e06;
+}
+.lfont1{
+  font-size: 24rpx;
+  vertical-align:text-bottom;
+}
+.rlfont0{
+  font-weight: 600;
+  margin-bottom: 3%;
+}
+.rlfont1{
+  font-size: 26rpx;
+  opacity: 0.5;
+  margin-bottom: 1%;
+}
+.btn{
+  display: flex;
+  background: #ff0033;
+  color: #fff;
+  font-size:13px !important; 
+}

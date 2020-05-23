@@ -1,0 +1,132 @@
+<!--pages/bar4/bar4.wxml-->
+<view id="one">
+<view id="head" >
+  <image src="/images/tuo1.png" class="suo" ></image>
+  <view class="_hview1">
+    <open-data type="userAvatarUrl" class="_himg1"></open-data> 
+  </view>
+  <view class="_hname">
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view class="_phone">{{mysite[0].uphone}}</view> 
+  <image src="/images/you1.png" class="_hicon"></image>
+  <view class="_hv">
+  <view style="height:25rpx"></view>
+    <van-row style="">
+      <van-col span="8" >
+        <view class="_center _color" >0.00元</view>
+        <view style="height:15rpx"></view>
+        <view class="_center">钱包</view>
+      </van-col>
+      <van-col span="8" bindtap="jumpCoupon" >
+        <view class="_center _color">{{couponNum}}个</view>
+        <view style="height:15rpx"></view>
+        <view class="_center">红包</view>
+      </van-col>
+      <van-col span="8" >
+        <view class="_center _color">20个</view>
+        <view style="height:15rpx"></view>
+        <view class="_center">金币</view>
+      </van-col>
+    </van-row>
+  </view>
+</view>
+<view id="body">
+  <view style="height:230rpx"></view>
+  <image src="/images/wb1.png" class="_bimg1"></image>
+  <view class="_bview">
+    <van-row custom-class="style">
+      <van-col span="1" offset="1" >
+        <image src="/images/w4.png" class="_bimg2"></image>
+      </van-col>
+      <van-col span="8" offset="1">
+        <text>  我的收藏</text>
+      </van-col>
+      <van-col span="2" offset="10">
+        <van-icon name="arrow" />
+      </van-col>
+    </van-row>
+  </view>
+  <view class="_bview" bindtap="jumpsite">
+    <van-row custom-class="style">
+      <van-col span="1" offset="1" >
+        <image src="/images/_1.png" class="_bimg2"></image>
+      </van-col>
+      <van-col span="8" offset="1" custom-class="border">
+        <text>  我的地址</text>
+      </van-col>
+      <van-col span="2" offset="10">
+        <van-icon name="arrow" />
+      </van-col>
+    </van-row>
+   
+  </view>
+
+  <view class="_bview " bindtap="jumpnull">
+    <van-row custom-class="style" >
+      <van-col span="1" offset="1">
+        <image src="/images/w5.png" class="_bimg2"></image>
+      </van-col>
+      <van-col span="8" offset="1" custom-class="center">
+        <text>  新人有礼</text>
+      </van-col>
+      <van-col span="2" offset="10">
+        <van-icon name="arrow" />
+      </van-col>
+    </van-row>
+  </view>
+  <view class="_bview " bindtap="jumpnull">
+
+    <van-row custom-class="style" >
+      <van-col span="1" offset="1">
+        <image src="/images/w6.png" class="_bimg2"></image>
+      </van-col>
+      <van-col span="8" offset="1">
+        <text>  推荐有奖</text>
+      </van-col>
+      <van-col span="2" offset="10">
+        <van-icon name="arrow" />
+      </van-col>
+    </van-row>
+  </view>
+  <view class="_bview " bindtap="jumpnull">
+    <van-row custom-class="style">
+      <van-col span="1" offset="1">
+        <image src="/images/w7.png" class="_bimg2"></image>
+      </van-col>
+      <van-col span="8" offset="1">
+        <text>  积分商城</text>
+      </van-col>
+      <van-col span="2" offset="10">
+        <van-icon name="arrow" />
+      </van-col>
+    </van-row>
+  </view> 
+  <view class="_bview " bindtap="jumpgetcoupon">
+    <van-row custom-class="style">
+      <van-col span="1" offset="1">
+        <image src="/images/w9.png" class="_bimg2"></image>
+      </van-col>
+      <van-col span="8" offset="1">
+        <text>  签到红包</text>
+      </van-col>
+      <van-col span="2" offset="10">
+        <van-icon name="arrow" />
+      </van-col>
+    </van-row>
+  </view>
+  <view class="_bview " bindtap="jumpnull">
+    <van-row custom-class="style">
+      <van-col span="1" offset="1">
+        <image src="/images/w10.png" class="_bimg2"></image>
+      </van-col>
+      <van-col span="8" offset="1">
+        <text>  我的客服</text>
+      </van-col>
+      <van-col span="2" offset="10">
+        <van-icon name="arrow" />
+      </van-col>
+    </van-row>
+  </view>
+</view>
+</view>

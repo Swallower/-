@@ -1,0 +1,83 @@
+<view style=" position :relative;background:white;">
+  <van-cell-group class="_boborder">
+    <van-field
+      value="{{ uname }}"
+      placeholder="{{placeholder1}}"
+      border="{{ false }}"
+      bind:blur="onChangeName"
+      label="联系人"  
+      error="{{error1}}" 
+    />
+  </van-cell-group>
+<view style="border-bottom:1px solid #ccc; width:100%;"></view>
+<view class="_sex ">
+  <text style="margin:30rpx;" class="_tsex">性别</text> 
+</view>
+  <van-radio-group value="{{ radio }}" bind:change="onChangeSex" class="_chosesize">
+    <view style="height:15rpx;width:100%;"></view>
+    <van-radio use-icon-slot value="{{ radio }}" name="1" class="_boborder">
+      <text style="">先生</text>  
+      <image slot="icon" src="{{ radio === '1' ? icon.active1 : icon.normal1 }}"  class="_imgsize"/>
+    </van-radio>
+ <view style="height:15rpx; width:100% ;margin-bottom:10rpx;"></view>
+    <van-radio use-icon-slot value="{{ radio }}" name="0">
+      女士
+      <image slot="icon" src="{{ radio === '0' ? icon.active0 :     icon.normal0 }}" class="_imgsize"/>
+    </van-radio>
+    <view style=" width:100%;height:11rpx"></view>
+  </van-radio-group>
+  <view style="border-bottom:1px solid #ccc; width:100%;"></view>
+  <van-cell-group class="_boborder">
+    <van-field
+      value="{{ phone }}"
+      placeholder="{{placeholder2}}"
+      border="{{ false }}"
+      bind:blur="onChangePhone"
+      label="电话" 
+      bind:input="oncolor"
+      error="{{error2}}"
+    />
+  </van-cell-group>
+  <view style="border-bottom:1px solid #ccc; width:100%;"></view>
+  
+  <van-cell-group class="_boborder" bindtap="jumpmap">
+    <van-field
+      value="{{ address }}"
+      placeholder="地址"
+      border="{{ false }}"
+      bind:change="onChange"
+      label="地址" 
+    />
+  </van-cell-group>
+  <view style="border-bottom:1px solid #ccc; width:100%;"></view>
+  
+   <van-cell-group class="_boborder">
+    <van-field
+      value="{{ doorplate }}"
+      placeholder="{{placeholder3}}"
+      border="{{ false }}"
+      bind:blur="onChangeDoorplate"
+      label="门牌号"
+      error="{{error3}}"
+      bind:input="oncolor"
+      
+    />
+  </van-cell-group>
+  <view style="border-bottom:1px solid #ccc; width:100%;"></view>
+  <view class="_laber">
+    <van-row >
+      <van-col span="4" >
+      </van-col>
+        <text class="_fontc"> 标签</text>
+      <radio-group class="radio-group _radio" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}" wx:key="index">
+          <radio value="{{item.name}}" checked="{{item.checked}}" color="#f58200" />{{item.value}}
+            <!-- <view>\n</view> -->
+        </label>
+      </radio-group> 
+      <van-icon name="arrow"  style="margin-left:50rpx"/>
+    </van-row>
+  </view>
+  <button class="_btn2" bindtap="addsite">添加地址</button>
+</view>
+  

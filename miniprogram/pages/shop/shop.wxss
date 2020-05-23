@@ -1,0 +1,270 @@
+/* pages/shop/shop.wxss */
+page{
+  background: #fff;
+}
+._himg{
+  width:100%;
+  height: 200rpx;
+}
+._hm{
+  width: 150rpx;
+  height:150rpx;
+  position: absolute;
+  left:300rpx;
+  top:100rpx;
+}
+._bm{
+  width: 190rpx;
+  height:190rpx;
+  margin-left: 10rpx;
+  display: flex;  
+}
+._head{
+  position: relative;
+}
+._title{
+  width: 100%;
+  display: flex;
+  justify-content:center  ; 
+  font-weight: 600;
+  font-size:32rpx;
+  margin-top:10rpx
+}
+._mright{
+  margin-right: 32rpx;
+  font-size: 24rpx;
+  opacity: 0.5
+}
+._intro{
+  width: 100%;
+  display: flex ;
+  justify-content:  center  ;
+  margin-top:10rpx
+}
+.van-cell__title{
+  width:  100%;
+  display: flex;
+  justify-content: center;
+  font-size: 24rpx;
+  opacity: 0.5
+
+}
+._forder{
+  margin-right: 32rpx;
+}
+._font{
+  font-size: 24rpx;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  font-family: "Microsoft YaHei";
+}
+.left {
+  width: 25%;
+  font-size: 24rpx;
+  height: 1020rpx;
+  background-color: #F4F4F4;
+}
+.left view {
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+.select {
+  background-color: #ffffff;
+  border-left: 2px solid #ff0000;
+  font-weight: bold;
+  color: #ff0000;
+}
+.normal {
+  background-color: #F4F4F4;
+  border-bottom: 1px solid #f2f2f2;
+}
+.right {
+  width: 75%;
+  margin: 0px;
+  background: #fff;
+}
+._brelative{
+  position: relative;
+  width:100%;
+  height: 190rpx;
+  display:flex;
+  /* padding:12rpx; */
+  margin-top:16rpx;
+  margin-bottom: 32rpx;
+}
+._btitle{
+  width:100%;
+  font-weight: bold;
+  font-size: 32rpx;
+  margin-bottom: 16rpx;
+}
+._bfmaterial{
+  font-size: 24rpx;
+  opacity: 0.5;
+  margin-bottom: 16rpx;
+}
+._bmsales{
+  font-size: 24rpx;
+  opacity: 0.5;
+  margin-bottom: 8rpx;
+}
+._bprice{
+  color:red;
+  opacity: 0.8;
+  font-size:30rpx;
+  font-weight: bold;
+  /* margin-bottom: 12rpx; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+._bsright{
+  margin-right: 48rpx;
+  
+}
+._bright{
+  margin-left:16rpx;
+  width: 100%;
+}
+._bheight{
+  height: 1020rpx;
+  
+}
+
+.van-stepper{
+  display: flex;
+  margin-left: 100rpx; 
+}
+._enumber{
+  color:orange;
+  font-size:80rpx;
+  margin-left: 120rpx;
+}
+._enumber1{
+  color:#000;
+  opacity: 0.5;
+  margin-left: 12rpx;
+}
+._item1{
+  margin-left:40rpx;
+  justify-content: center;
+  color:#000;
+  opacity: 0.5;
+}
+._item2{
+  color:#000;
+  opacity: 0.5;
+  margin-left: 24rpx;
+}
+._pheight{
+  height:52rpx;
+  display: flex;
+  margin-left: 30rpx;
+  align-items: center;
+}
+._shoppingcar{
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+._scar1{
+  color: #fff;
+  background: #515151  ;
+  height: 54px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  position: relative  ;
+  border:1px solid #515151 ;
+  border-radius: 50rpx 0rpx 0rpx 0;
+}
+
+._scar2{
+  color: #fff;
+  background:  #8a8a8a;
+  height: 54px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid #8a8a8a ;
+  border-radius: 0rpx 50rpx 0rpx 0;
+}
+._scar2buy{
+  background: #f58200;
+  color: #fff;
+  height: 54px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid #f58200 ;
+  border-radius: 0rpx 50rpx 0rpx 0;
+}
+._imgcar{
+  /* position:  */
+  height:90rpx;
+  width: 90rpx;
+  margin: 0 50rpx 50rpx;
+}
+._carnone{
+  display: none;
+}
+._ucomment{
+  width:100%;
+  height: 320rpx;
+  /* border:2px solid red; */
+  /* border-bottom: 1px solid #e6e6e6; */
+}
+._uhead{
+  width: 100%;
+  display: flex;
+}
+._uheadimg{
+  width: 80rpx;
+  height: 80rpx;
+  border:2px solid #f2f2f2;
+  border-radius: 50%;
+  margin-left:3% 
+}
+._uleft{
+  margin-left: 2%;
+  font-size: 28rpx;
+  height:80rpx; 
+}
+._uvip{
+  height: 28rpx;
+  width:36rpx;
+  margin-left: 16rpx;
+}
+._udate{
+  height: 80rpx;
+  color: #000;
+  opacity: 0.5;
+  font-size:  24rpx;
+}
+._ubody{
+  width:100%;
+  height: 180rpx;
+}
+._ubimg{
+  width:160rpx;
+  height: 160rpx;
+  margin-left:17%; 
+}
+._ubimg1{
+  width:160rpx;
+  height: 160rpx;
+  margin-left:6%; 
+}
+._ucommenttext{
+  margin-left:17%;
+  font-size: 28rpx;
+  margin-bottom:8rpx;
+}

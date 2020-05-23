@@ -1,0 +1,301 @@
+<!--pages/shop/shop.wxml-->
+<!-- <text>pages/shop/shop.wxml</text> -->
+<view>
+  <view class="_head">
+    <image src="/images/pa.png" class="_himg"></image>
+    <view>
+      <image src="/images/malaoshi.jpg" class="_hm"></image>
+    </view>
+    <view style="height:50rpx;width:100%"></view>
+    <view class="_title">大司马下饭食堂(南京总店)</view>
+    <view class="_intro">
+      <text class="_mright">评价5.0  </text>
+      <text class="_mright">月售9999+</text>
+      <text class="_mright">大司专送约4s</text>
+    </view>
+    <view>
+      <van-collapse value="{{ activeNames }}" bind:change="onChangeCollapse"  border="false">
+  <van-collapse-item title=" 满99减90  满100减101  免配送费" name="1" border="false">
+    <view style="margin-top:16rpx">
+      <text class="_forder" style="border:2px solid rgba(64,116,52,0.5)">首单</text>
+      <text class="_font" style="color:rgba(64,116,52,0.5)">恰饭呀新用户享首单立增15元优惠</text>
+    </view>
+    <view style="margin-top:16rpx">
+      <text class="_forder" style="border:2px solid rgba(254,67,101,0.5) ;">满减</text>
+      <text class="_font" style="color:rgba(254,67,101,0.5)">满{{discounts[0].start}}减{{discounts[0].end}} 满{{discounts[1].start}}减{{discounts[1].end}} 满{{discounts[2].start}}减{{discounts[2].end}} 
+      </text>
+    </view>
+    <view style="margin-top:16rpx">
+      <text class="_forder" style="border:2px solid rgba(0,90,171,0.5); ">特价</text>
+      <text class="_font" style="color:rgba(0,90,171,0.5)">特价商品999¥</text>
+    </view>
+  </van-collapse-item>
+
+</van-collapse>
+    </view>
+  </view> 
+  <view class="_body">
+    <van-tabs active="{{ active }}" bind:change="onChangeTitle"  sticky animated swipeable="true">
+      <van-tab title="点餐" bind:click="onChangeActive">  
+      <view class="content">
+      <view class='left'>
+        <view class="{{flag==0?'select':'normal'}}" id='0' bindtap='switchNav'>大司下饭强推</view>
+        <view class="{{flag==1?'select':'normal'}}" id='1' bindtap='switchNav'>闪现K头</view>
+        <view class="{{flag==2?'select':'normal'}}" id='2' bindtap='switchNav'>TP送餐</view>
+        <view class="{{flag==3?'select':'normal'}}" id='3' bindtap='switchNav'>金身不用</view>
+        <view class="{{flag==4?'select':'normal'}}" id='4' bindtap='switchNav'>大招逃跑</view>
+      </view>
+      <view class='right'>
+        <view class='category'>
+          <swiper current='{{currentTab}}' style='height:1110rpx' vertical="{{true}}">
+            <swiper-item id='0' catchtouchmove="stopTouchMove" >
+              <scroll-view class="_bheight" scroll-y enable-flex="true" white-space:nowrap>
+               <view class="_brelative" wx:for="{{list}}" wx:key="{{index}}">
+                <view >
+                  <image src="/images/malaoshi.jpg" class="_bm"></image>
+                </view>
+                <view class="_bright">
+                  <view class="_btitle">{{item.title}}</view>
+                  <view class="_bfmaterial">主要原料:{{item.material}}</view>
+                  <view class="_bmsales">月售:{{msales}}</view>
+                  <view class="_bprice">
+                    <text >{{item.price}}¥</text> 
+                    <van-stepper value="{{ item.number }}" min="0" max="99"  button-size="20" input-width="24" bind:change="addtakeout" data-item="{{item}}" class="_bsright" />  
+                  </view>
+                </view>
+              </view>
+              </scroll-view>
+            </swiper-item>           
+            <swiper-item id='1' catchtouchmove="stopTouchMove">
+              <scroll-view class="_bheight" scroll-y enable-flex="true" white-space:nowrap>
+               <view class="_brelative" wx:for="{{list}}" wx:key="{{index}}">
+                <view >
+                  <image src="/images/malaoshi.jpg" class="_bm"></image>
+                </view>
+                <view class="_bright">
+                  <view class="_btitle">{{item.title}}</view>
+                  <view class="_bfmaterial">主要原料:{{item.material}}</view>
+                  <view class="_bmsales">月售:{{msales}}</view>
+                  <view class="_bprice">
+                    <text >{{item.price}}¥</text> 
+                    <van-stepper value="{{ item.number }}" min="0" max="99"  button-size="20" input-width="24" bind:change="addtakeout" data-item="{{item}}" class="_bsright" />  
+                  </view>
+                </view>
+              </view>
+              </scroll-view>
+            </swiper-item>            
+            <swiper-item id='2' catchtouchmove="stopTouchMove">
+              <scroll-view class="_bheight" scroll-y enable-flex="true" white-space:nowrap>
+               <view class="_brelative" wx:for="{{list}}" wx:key="{{index}}">
+                <view >
+                  <image src="/images/malaoshi.jpg" class="_bm"></image>
+                </view>
+                <view class="_bright">
+                  <view class="_btitle">{{item.title}}</view>
+                  <view class="_bfmaterial">主要原料:{{item.material}}</view>
+                  <view class="_bmsales">月售:{{msales}}</view>
+                  <view class="_bprice">
+                    <text >{{item.price}}¥</text> 
+                    <van-stepper value="{{ item.number }}" min="0" max="99"  button-size="20" input-width="24" bind:change="addtakeout" data-item="{{item}}" class="_bsright" />  
+                  </view>
+                </view>
+              </view>
+              </scroll-view>
+            </swiper-item>
+            <swiper-item id='3' catchtouchmove="stopTouchMove">
+              <scroll-view class="_bheight" scroll-y enable-flex="true" white-space:nowrap>
+               <view class="_brelative" wx:for="{{list}}" wx:key="{{index}}">
+                <view >
+                  <image src="/images/malaoshi.jpg" class="_bm"></image>
+                </view>
+                <view class="_bright">
+                  <view class="_btitle">{{item.title}}</view>
+                  <view class="_bfmaterial">主要原料:{{item.material}}</view>
+                  <view class="_bmsales">月售:{{msales}}</view>
+                  <view class="_bprice">
+                    <text >{{item.price}}¥</text> 
+                    <van-stepper value="{{ item.number }}" min="0" max="99"  button-size="20" input-width="24" bind:change="addtakeout" data-item="{{item}}" class="_bsright" />  
+                  </view>
+                </view>
+              </view>
+              </scroll-view>
+            </swiper-item>
+            <swiper-item id='4' catchtouchmove="stopTouchMove">
+              <scroll-view class="_bheight" scroll-y enable-flex="true" white-space:nowrap>
+               <view class="_brelative" wx:for="{{list}}" wx:key="{{index}}">
+                <view >
+                  <image src="/images/malaoshi.jpg" class="_bm"></image>
+                </view>
+                <view class="_bright">
+                  <view class="_btitle">{{item.title}}</view>
+                  <view class="_bfmaterial">主要原料:{{item.material}}</view>
+                  <view class="_bmsales">月售:{{msales}}</view>
+                  <view class="_bprice">
+                    <text >{{item.price}}¥</text> 
+                    <van-stepper value="{{ item.number }}" min="0" max="99"  button-size="20" input-width="24" bind:change="addtakeout" data-item="{{item}}" class="_bsright" />  
+                  </view>
+                </view>
+              </view>
+              </scroll-view>
+            </swiper-item>
+          </swiper>
+        </view>     
+      </view>
+    </view>
+  </van-tab>
+      
+      <van-tab title="评价" bind:click="onChangeActive">
+      <van-row>
+        <van-col span="12">
+          <text class="_enumber">5.0</text>
+          <text class="_enumber1">商家评分</text>
+          <van-rate
+            readonly
+            value="5"
+            bind:change="onChange"
+            allow-half
+            size="12"
+            gutter="2"
+            style="margin-left:105rpx"
+          />
+        </van-col>
+        <van-col span="12" class="_pheight">
+          <text class="_item1">味道</text>
+          <text class="_item2">5.0</text>
+        </van-col>
+        <van-col span="12" class="_pheight">
+          <text class="_item1">包装</text>
+          <text class="_item2">5.0</text>
+        </van-col>
+        <van-col span="12" class="_pheight">
+          <text class="_item1">配送</text>
+          <text class="_item2">5.0</text>
+        </van-col>
+      </van-row>
+      <van-divider contentPosition="left">用户评论</van-divider>
+      <view class="_ucomment">
+          <view class="_uhead">
+            <image src="/images/niming.png" class="_uheadimg"></image>
+            <view class="_uleft">
+              <view>
+                <text>朕的辣条呢</text>  
+                <image src="/images/vip.png" class="_uvip"></image>
+              </view>
+              <van-rate
+                readonly
+                value="5"
+                bind:change="onChange"
+                size="10"
+                gutter="2"
+              /> 
+            </view>
+            <view class="_udate" >
+              <view style="margin-left:250rpx">
+                2019-12-10
+              </view>
+            </view>
+          </view>
+          <view class="_ubody">
+            <view class="_ucommenttext">挺下饭的,我饱了</view>
+            <view style="display:flex">
+              <image src="/images/pa.png" class="_ubimg"></image>
+            </view>
+          </view>
+      </view>
+      <van-divider />
+      <view class="_ucomment">
+          <view class="_uhead">
+            <image src="/images/niming.png" class="_uheadimg"></image>
+            <view class="_uleft">
+              <view>
+                <text>朕的辣条呢</text>  
+                <image src="/images/vip.png" class="_uvip"></image>
+              </view>
+              <van-rate
+                readonly
+                value="5"
+                bind:change="onChange"
+                size="10"
+                gutter="2"
+              /> 
+            </view>
+            <view class="_udate" >
+              <view style="margin-left:250rpx">
+                2019-12-10
+              </view>
+            </view>
+          </view>
+          <view class="_ubody">
+            <view class="_ucommenttext">挺下饭的,我饱了</view>
+            <view style="display:flex">
+              <image src="/images/pa.png" class="_ubimg"></image>
+              <image src="/images/pa.png" class="_ubimg1"></image>
+            </view>
+          </view>
+      </view>
+      <van-divider />
+      <view class="_ucomment">
+          <view class="_uhead">
+            <image src="/images/niming.png" class="_uheadimg"></image>
+            <view class="_uleft">
+              <view>
+                <text>朕的辣条呢</text>  
+                <image src="/images/vip.png" class="_uvip"></image>
+              </view>
+              <van-rate
+                readonly
+                value="5"
+                bind:change="onChange"
+                size="10"
+                gutter="2"
+              /> 
+            </view>
+            <view class="_udate" >
+              <view style="margin-left:250rpx">
+                2019-12-10
+              </view>
+            </view>
+          </view>
+          <view class="_ubody">
+            <view class="_ucommenttext">挺下饭的,我饱了</view>
+            <view style="display:flex">
+              <image src="/images/pa.png" class="_ubimg"></image>
+              <image src="/images/pa.png" class="_ubimg1"></image>
+              <image src="/images/pa.png" class="_ubimg1"></image>
+            </view>
+          </view>
+      </view>
+      </van-tab>
+      <van-tab title="商家" bind:click="onChangeActive">
+      <view class="_bminformation">
+      </view>
+        <van-cell-group>
+          <van-cell title="商家名称" value="大司马下饭食堂" />
+          <van-cell title="商家品类" value="其他快餐" />
+          <van-cell title="商家地址" value="斗鱼******" />
+          <van-cell title="商家电话" value="12345678901" />
+          <van-cell title="营业时间" value="09:00~22:00" />
+        </van-cell-group>
+        <van-cell
+          is-link
+          title="营业资质"
+          link-type="navigateTo"
+          url="/pages/shop/shop"
+        />
+          
+        <view style="display:flex;justify-content: center">
+          <van-button plain type="danger" size="large" custom-class>举报商家</van-button>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+  <view class="{{active==0?'_shoppingcar':'_carnone'}}" bindtap="">
+    <view class="_scar1">
+      <image src="/images/wm.png" class="_imgcar"></image>
+      <text>配送费0元</text>
+    </view>
+    <view class="{{totalprice>=initial?'_scar2buy':'_scar2'}}"  bindtap="{{totalprice>=initial?'jumpSettleAccounts':false}}">
+      <text>结算:¥{{totalprice==0?nopurchased:totalprice>=initial?totalprice:nopurchased-totalprice}}</text>
+    </view>
+  </view>
+  </view>

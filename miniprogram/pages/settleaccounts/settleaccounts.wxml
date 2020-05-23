@@ -1,0 +1,209 @@
+<!--pages/settleaccounts/settleaccounts.wxml-->
+<view id="all">
+  <view id="head">
+    <!-- <view class="_hsite" bindtap="jumpChangeSite">
+      <view class="_hsitel">
+        {{mysite[0].uaddress}}{{mysite[0].udoorplate}}
+      </view>
+      <view class="_hsiter">
+        <van-icon name="arrow" size="40rpx"/>
+      </view>
+    </view> -->
+    <van-cell title="{{flag==true?site.uaddress+site.udoorplate:mysite[0].uaddress+mysite[0].udoorplate }}" is-link bind:click="showPopup" custom-class="red"  />
+    <van-popup show="{{ show }}" bind:close="onClose" custom-class="width" >
+      <scroll-view scroll-y="true"style="height:800rpx">
+        <view wx:for="{{mysite}}" wx:key="{{index}}" class="padding" bindtap="selectSite" data-item="{{item}}" >
+          <view class="_vpwidth _vpb">详细地址:{{item.uaddress}}{{item.udoorplate}}<image src="/images/{{item.uli}}.png" class="_img"></image> </view>
+          <view >电话:<text class="_vpp">{{item.uphone}}</text></view>
+          <view>联系人:<text class="_vpp">{{item.uname}}({{item.usex==0?'女士':'先生'}})</text></view>
+        </view>
+        <view class="_vpcenter">
+          <!-- <van-button color="linear-gradient(to right, lemonchiffon, lightcyan)" bindtap="jumpaddress" ><text style="color:#000;opacity: 0.5;font-size:32rpx;font-width:600">新增地址</text></van-button> -->
+        </view>
+      </scroll-view>
+    </van-popup>
+
+    <view class="_hfont">
+      {{flag==true?site.uname:mysite[0].uname}}---{{flag==true?site.uphone:mysite[0].uphone}}     
+    </view> 
+
+    <view style="width:100%;margin-top:3%;border-radius: 4px 4px 0 0 ">
+      <view class="_hcell">
+        <view class="_hfcenter">送达时间</view>
+        <view class="_hfcolor">尽快送达 <van-icon name="arrow" size="18" color="#1296db" /></view>
+      </view>
+    </view>
+    <view style="width:100% ;border-radius:0 0 4px 4px">
+      <view class="_hcell">
+        <view class="_hfcenter">支付方式</view>
+        <view class="_hfcolor">微信免密支付 <van-icon name="arrow" size="18" color="#1296db" /></view>
+      </view>
+    </view>
+  </view>
+  <view id="body">
+    <view class="_bheight"></view>
+    <view class="_bshopname">
+      {{shopName}}
+    </view>
+    <van-divider/>
+    <view  class="_bflex" wx:for="{{list}}" wx:key="{{index}}" wx:if="{{item.number>0}}">
+      <view style="width:15%;" >
+        <image src="/images/malaoshi.jpg" class="_bimg"></image>
+      </view>
+      <van-row class="_bright">
+        <van-col span="10" offset="1">
+          <view class="_btitlefont">{{item.title}}</view>
+          <view></view>  
+        </van-col>
+        <van-col span="4" offset="2">
+          <text class="_bnumberfont">×{{item.number}}</text>
+        </van-col>
+        <van-col span="3" offset="2" custom-class="right">
+          <text class="_bpricefont">¥{{item.number>0?item.number*item.price:''}}</text> 
+        </van-col>
+      </van-row>
+      <!-- </view> -->
+    </view>
+    <view class="_bpadding">
+      <van-row>
+        <van-col span="19">
+          <text class="_btitlefont">餐盒费</text> 
+        </van-col>
+        <van-col span="3" custom-class="right" >
+          <text class="_bpricefont">¥{{fcontainerprice}}</text>
+        </van-col>
+      </van-row>
+    </view>
+    <view class="_bheight"></view>
+    <view class="_bpadding">
+      <van-row>
+        <van-col span="21">
+          <text class="_btitlefont">配送费·顺路快送</text> 
+        </van-col>
+        <van-col span="3" >
+          <text class="_bpricefont">¥1</text>
+        </van-col>
+      </van-row>
+    </view>
+    <view class="_bheight"></view>
+    <view class="_bpadding">
+      <van-row>
+        <van-col span="18">
+          <text class="_btitlefont">店铺优惠</text> 
+        </van-col>
+        <van-col span="4"  custom-class="right">
+          <view class="_bpricefontred">¥{{discount}}</view>
+        </van-col>
+      </van-row>
+    </view>
+    <view class="_bheight"></view>
+    <view class="_bpadding">
+      <van-row bindtap="jumpCoupon" >
+        <van-col span="15">
+          <text class="_btitlefont">红包/抵用券</text> 
+        </van-col>
+        <van-col span="5" custom-class="right">
+          <text class="{{flag1==false?'_bfontstyle':'hidden'}}" >
+            <text>兑换红包</text>
+          </text> 
+        </van-col>
+        <van-col span="2"  custom-class="right">
+          <van-cell title="" is-link bind:click="showPopup1" custom-class="pad" />
+<van-popup show="{{ show1 }}" bind:close="onClose1" custom-class="width">
+        <scroll-view scroll-y="true"style="height:800rpx">
+          <view style="width:100%;">
+              <view class="all" wx:for="{{coupon}}" wx:key="{{index}}"  bindtap="{{sum>=item.condition? 'getselcoupon':'notouch'}}" data-selcoupon="{{item}}">
+                <view class="left">
+                  <view class="lfont0"><text class="lfont1">¥</text>{{item.coupon}}</view>
+                </view>
+                <view class="right">
+                  <view class="rleft">
+                    <view class="rlfont0">品质联盟专享红包</view>
+                    <view class="rlfont1">·限制品质联盟商家可用</view>
+                    <view class="rlfont1">·满{{item.condition}}可以用</view>
+                    <view class="rlfont1">·<text style='color:{{sum>=item.condition? "": "#ff0000b9"}}'>{{sum>=item.condition?'可使用':'不可使用'}}</text></view>
+                  </view>
+                  <view class="rright">
+                    <van-button size="mini" type="danger"  >进店使用</van-button>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+          </van-popup>
+            <text class="_bpricefontred">{{flag1==false?'':'¥'+selcoupon}}</text> 
+        </van-col>
+      </van-row>
+    </view>
+    <view class="_bheight"></view>
+    <view class="_bpadding2">
+      <van-row>
+        <van-col span="18">
+          <text class="_btitlefonta">实际付款</text> 
+        </van-col>
+        <van-col span="4" >
+          <view class="_basd">
+            <view class="_bpricefontb">¥{{totalprice}}</view>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+  <view id="foot">
+    <van-cell-group>
+      <van-field
+        value="{{ message }}"
+        label="订单备注"
+        type="textarea"
+        autosize
+        border="{{ false }}"
+        maxlength="50"
+        flxed="true"
+        bind:blur="onChangeText"
+        />
+    </van-cell-group>
+    <view class="_fmarign " >
+      <van-row>
+        <van-col span="17"> 
+          <view style="margin-left:7%" class="_ffontsize">额外餐具</view>  
+        </van-col>
+        <van-col span="7">
+          <van-stepper value="{{ 0 }}"  integer  min="0" max="9"  bind:change="onChangeTableware" />
+        </van-col>
+      </van-row>
+    </view>
+    <view class="_fmarign ">
+      <van-row>
+        <van-col span="18"> 
+          <view style="margin-left:7%" class="_ffontsize">号码保护</view>  
+        </van-col>
+        <van-col span="6">
+          <van-switch
+            checked="{{ checked }}"
+            active-color="#07c160"
+            bind:change="onChangeSwitch"
+          />
+        </van-col>
+      </van-row>
+    </view> 
+    <view class="_fmarginbottom"></view>
+  </view>
+</view>
+<view style="height:100rpx"></view>
+<view class="checkstand">
+  <van-row>
+    <van-col span="5" offset="2" >
+      <view class="_cfont1">
+        ¥{{totalprice}}
+      </view>
+    </van-col>
+    <van-col span="5" offset="1">
+      <view class="_cfont2">
+        {{ (selcoupon+discount)==0?'未优惠':'已优惠¥'}}{{ flag1==false?discount:selcoupon+discount}}
+      </view>
+    </van-col>
+    <van-col span="6" offset="4" bindtap="submitOrder" >
+      <button class="_cbtn" size="mini">免密支付</button>
+    </van-col> 
+  </van-row>
+</view>

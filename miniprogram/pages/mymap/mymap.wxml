@@ -1,0 +1,4 @@
+<!--pages/mymap/mymap.wxml-->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" controls="{{controls}}" circles="{{circles}}" bindreginchange="regionChange" polyline="{{polyline}}"  bindcontroltap='controlClick' style="width: 100%; height:400px;"></map>
+<button type='primary' bindtap='locationClick'>定位位置</button>
+<button type='primary' bindtap='selectedClick'>选择位置</button>

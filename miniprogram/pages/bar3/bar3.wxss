@@ -1,0 +1,86 @@
+/* pages/bar3/bar3.wxss */
+.order{
+  font-size: 50rpx;
+  font-weight: bold;
+  margin-left: 5%;
+}
+.all{
+  width: 90%;
+  margin: 2% 3%;
+  display: flex ;
+  background: #fff;
+  border-radius: 16rpx;
+  padding:2% 2%;
+}
+.left{
+  width: 16%;
+  display: flex ;
+  justify-content: center ;
+  
+}
+.right{
+  width: 80%;
+  /* display: flex; */
+}
+._limg{
+  width: 80rpx;
+  height: 80rpx;
+  display:  flex  ;
+}
+.arrow{
+  display: inline-block;
+}
+._rfourright{
+  display: flex;
+  justify-content: space-between;
+  margin-top:2%;
+  padding-right: 7%;
+}
+.rrshopname{
+  font-size: 34rpx;
+  margin-bottom: 3%;
+}
+._tlength{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;/*限制行数*/
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 追加这一行代码 */
+}
+.btnfont{
+  font-size: 26rpx !important;
+  color: #000;
+  width:60rpx;
+  border:1px solid #ddd;
+  border-radius: 16rpx;
+  padding :8rpx;
+  font-weight: normal b;
+  line-height: 1.8 !important;
+  margin: 0;
+
+}
+.btnfontplusb{
+  color: #1296db;
+  border: 1px solid #1296db;
+}
+.btnfontplusa{
+  color: mediumaquamarine ;
+  border: 1px solid mediumaquamarine;
+}
+._margintop{
+  margin-top: 2%;
+  font-size: 28rpx;
+}
+.center{
+  display: flex;
+  align-content: center;
+}
+._bold{
+  font-weight: bold;
+}
+._right{
+  display: flex;
+  justify-content: flex-end;
+  margin-left:1%;
+}

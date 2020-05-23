@@ -1,0 +1,32 @@
+
+<view  wx:for="{{list}}" wx:key="{{index}}" class="_mysite" bindtap="jumpupdate"  bindlongpress="deletesite" data-id="{{item}}">
+  <view class="_address _tlength ">
+   
+      {{item.uaddress}} 
+    
+    <image src="/images/{{item.uli}}.png" class="_img"></image>
+  </view>
+  <view class="_fulladdress">
+    <text class="_tlength">{{item.uaddress}} {{item.udoorplate}}</text>
+    <van-icon name="edit"  class="_right"/>
+  </view>
+  <view class="_tlength _fulladdress">
+    {{item.uname}}
+    ({{sex[item.usex]}})
+    <text style="margin-left:16rpx"> {{item.uphone}}</text>      
+  </view>
+</view>
+<view class="_bview " bindtap="jumpAddSite">
+  <view style="height:15rpx"></view>
+    <van-row >
+      <van-col span="1" offset="1">
+        <image src="/images/_2.png" class="_bimg2"></image>
+      </van-col>
+      <van-col span="8" offset="1">
+        <text class="_fontc">  新增地址</text>
+      </van-col>
+      <van-col span="2" offset="10">
+        <van-icon name="arrow"  />
+      </van-col>
+    </van-row>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/coupon/coupon.wxml-->
+<view style="width:100%;">
+  <view class="all" wx:for="{{list}}" wx:key="{{index}}" >
+    <view class="left">
+      <view class="lfont0"><text class="lfont1">¥</text>{{item.coupon}}</view>
+    </view>
+    <view class="right">
+      <view class="rleft">
+        <view class="rlfont0">品质联盟专享红包</view>
+        <view class="rlfont1">·限制品质联盟商家可用</view>
+        <view class="rlfont1">·满{{item.condition}}可以用</view>
+      </view>
+      <view class="rright">
+        <button size="mini"  class="btn">进店使用</button>
+      </view>
+    </view>
+  
+  </view>
+</view>

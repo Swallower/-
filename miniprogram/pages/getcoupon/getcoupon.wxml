@@ -1,0 +1,3 @@
+<!--pages/getcoupon/getcoupon.wxml-->
+<button bindtap="getcoupon">点击抽取红包</button>
+<text>点一下就抽取了, 程序员偷懒,就不写提示了</text>

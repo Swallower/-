@@ -1,0 +1,71 @@
+/* pages/addsite/addsite.wxss */
+._bview{
+  height:70rpx;
+  
+  
+  /* border:0.2px solid #eee */
+}
+page{
+  background: #fff
+}
+._imgsize{
+  height:36rpx;
+  width:36rpx;
+  margin-left: 56rpx;
+}
+._chosesize{
+  width: 80%;
+  height:140rpx;
+  background: #fff;
+  left:20%;
+  position: absolute;
+  top:80rpx;
+}
+._sex{
+  width:20%;
+  height:140rpx;
+  background: #fff;
+  position: relative;
+
+}
+._tsex{
+  font-size:31rpx;
+  position: absolute;
+  left:4rpx;
+  top:20rpx;
+  color:black;
+  opacity: 0.8
+}
+._boborder{
+  border-bottom:1px solid #ccc;
+}
+._laber{
+  padding:10px  15px;
+  
+}
+._btn{
+  width: 60rpx;
+  height:30rpx ;
+  display: inline;
+  font-weight: 400;
+  margin-left: 50rpx;
+  border: 2px solid #ccc
+}
+._radio{
+  display: initial;
+  width: 200rpx;
+  margin-left:105rpx;
+}
+._fontc{
+  font-size:31rpx;
+}
+._btn2{
+  background: beige;
+  margin-top:50rpx;
+  border: 2rpx solid beige;
+  border-radius: 20rpx;
+  margin-bottom: 50rpx;
+}
+.borderstyle{
+  margin:0!important;
+}

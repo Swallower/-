@@ -1,0 +1,50 @@
+/* pages/mysite/mysite.wxss */
+page{
+  background: #fff
+}
+._bimg2{
+  height: 30rpx;
+  width: 30rpx;
+}
+._bview{
+  height:70rpx;
+  background: #fff;
+  
+  /* border:0.2px solid #eee */
+}
+._fontc{
+  color:#1296db;
+}
+._img{
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 15rpx;  
+}
+._address{
+  /* padding:16rpx; */
+  font-weight: 600;
+  font-size: 32rpx;
+  
+}
+._mysite{
+  padding:16rpx;
+}
+._fulladdress{
+  font-size:26rpx;
+  color: #707070;
+  position: relative;
+}
+._right{
+  position: absolute;
+  left: 650rpx;
+  top:0rpx;
+}
+._tlength{
+  width: 580rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;/*限制行数*/
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 追加这一行代码 */
+}

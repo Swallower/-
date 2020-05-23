@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/bar1/bar1", 
+    "pages/mysite/mysite",
+    "pages/addsite/addsite", 
+    "pages/bar3/bar3",
+    "pages/bar4/bar4",
+    "pages/shop/shop",
+    "pages/getcoupon/getcoupon",
+    "pages/coupon/coupon",
+    "pages/settleaccounts/settleaccounts",
+    "pages/filmdetail/filmdetail",
+    "pages/bar2/bar2",
+    "pages/updatesite/updatesite",
+    "pages/mymap/mymap",
+    "pages/null/null"
+  ],
+  "window": {
+    "backgroundColor": "#f58200",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f58200",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#f58200",
+    "list": [{
+      "pagePath":"pages/bar1/bar1" ,
+      "text": "首页",
+      "iconPath": "images/1.png",
+      "selectedIconPath": "images/11.png"
+    },
+    {
+      "pagePath": "pages/bar2/bar2",
+      "text": "发现",
+      "iconPath": "images/2.png",
+      "selectedIconPath": "images/22.png"
+    },
+    {
+      "pagePath": "pages/bar3/bar3",
+      "text": "订单",
+      "iconPath": "images/3.png",
+      "selectedIconPath": "images/33.png"
+    },
+    {
+      "pagePath": "pages/bar4/bar4",
+      "text": "我的",
+      "iconPath": "images/4.png",
+      "selectedIconPath": "images/44.png"
+    }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+  
+}
